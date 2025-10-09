@@ -6,11 +6,12 @@ const express = require('express')
 // en later settings aan toe voegen
 const app = express()
 
-
-app.get('/', (req, res) => {
-  res.send('Hello Collin!')
-})
-
 console.log("API IS UP AND RUNNING, BABY....")
+
+// Endpoints 
+const goatsRouter = require('./routes/goats');
+
+app.use('/goats', goatsRouter);
+
 
 app.listen(3000)
