@@ -35,7 +35,8 @@ router.get('/:id', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  res.send("Added goat");
+    console.log(req.body);
+    res.send("Added goat");
 })
 
 router.delete('/:id', (req, res) => {
